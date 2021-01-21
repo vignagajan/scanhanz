@@ -14,7 +14,7 @@ for p in paths:
   image = cv2.imread(p)
   try:
     blurred_threshold = transformation(image)
-    cleaned_image = final_image(blurred_threshold)
+    cleaned_image = final_image(blurred_threshold,120)
     cv2.imwrite(p.replace("images","output"), cleaned_image
     )
     print("Enhancing of image ",img_name," is finished!")
